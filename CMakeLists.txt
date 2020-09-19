@@ -12,20 +12,20 @@ install(TARGETS udt
 
 include(CMakePackageConfigHelpers)
 
-write_basic_package_version_file(libudtConfigVersion.cmake
+write_basic_package_version_file(udtConfigVersion.cmake
                                  COMPATIBILITY SameMajorVersion)
 
-install(FILES ${CMAKE_CURRENT_BINARY_DIR}/libudtConfigVersion.cmake
+install(FILES ${CMAKE_CURRENT_BINARY_DIR}/udtConfigVersion.cmake
         DESTINATION lib/cmake/udt)
 
 install(EXPORT udtTargets
-        FILE libudtConfig.cmake
+        FILE udtConfig.cmake
         NAMESPACE udt::
         DESTINATION lib/cmake/udt)
 
 export(EXPORT udtTargets
        NAMESPACE udt::
-       FILE libudtConfig.cmake)
+       FILE udtConfig.cmake)
 
 export(PACKAGE udt)
 
